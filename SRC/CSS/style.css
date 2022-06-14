@@ -1,0 +1,136 @@
+html {
+    font-family: 'IBM Plex Sans', sans-serif;}
+body {
+    background: url(./images/bg-desktop.svg) center center no-repeat;
+    background-size: cover;
+    background-color: rgba(97, 6, 172, 0.788);
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-areas:  "header header"
+                            "content content"
+                            "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header {
+    grid-area: header;
+}
+
+header a img {
+    padding: 30px 30px 60px 40px;
+    max-width: 180px;
+}
+
+.content {
+ grid-area: content;
+ display: flex;
+}
+
+.content .image {
+    padding: 15px 40px;
+}
+
+.content .text h1 {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 60px 10px 5px 10px;
+}
+
+.content .text h2 {
+    color: #FFF;
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 5px 10px 10px 10px;
+}
+
+.content .text p {
+    color: #FFF;
+    font-weight: 300;
+    max-width: 500px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 30px;
+}
+
+.content .text .button {
+    margin-top: 30px;
+    padding: 10px 40px;
+    background-color: #FFF;
+    border-radius: 25px;
+    box-shadow: 1px 1.5px 10px;    
+}
+
+.content .text a:hover {
+    color: white;
+    background-color: rgb(229, 88, 201);
+    transition: 0.3s;
+    box-shadow: none;
+}
+
+.footer {
+    grid-area: footer;
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+}
+
+.footer .social{
+    padding: 10px 50px 10px 10px;
+}
+
+.footer a {
+    color: #FFF;
+    margin: 10px;
+    font-size: 1.8rem;
+    border-color: aquamarine;
+}
+
+.footer a:hover {
+    color: rgb(229, 88, 201);    
+    transition: 0.3s;
+}
+
+@media (max-width: 376px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .content .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content .text h1 {
+        text-align: center;
+    }
+
+    .content .text h2 {
+        text-align: center;
+    }
+
+    .content .text p {
+        text-align: center;
+    }
+
+    .content .text .button{
+        width: 180px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer  {
+        display: flex;
+        justify-items: center;
+        margin: auto;
+    }
+
+}
